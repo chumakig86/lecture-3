@@ -24,7 +24,6 @@ public abstract class BaseScript {
     public static WebDriver getDriver() {
         String browser = Properties.getBrowser();
         switch (browser) {
-            // TODO prepare required WebDriver instance according to browser type
             case "chrome":
                 System.setProperty(
                         "webdriver.chrome.driver",

@@ -10,22 +10,19 @@ public class CreateCategoryTest extends BaseScript {
     public static void main(String[] args) throws InterruptedException {
         // TODO prepare driver object
         EventFiringWebDriver driver = getConfiguredDriver();
-
-
         GeneralActions actions = new GeneralActions(driver);
-
+        String testCategName = "Test Category";
         driver.get(Properties.getBaseAdminUrl());
 
         // login
         actions.login("webinar.test@gmail.com", "Xcg7299bnSmMuRLp9ITw");
-        // ...
-
-        // login
 
         // create category
+        actions.createCategory(testCategName);
 
         // check that new category appears in Categories table
 
         // finish script
+        driver.close();
     }
 }
