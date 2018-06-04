@@ -11,7 +11,6 @@ public class Properties {
     private static final String DEFAULT_BROWSER = BrowserType.CHROME;
 
     /**
-     *
      * @return Website frontend.
      */
     public static String getBaseUrl() {
@@ -19,7 +18,6 @@ public class Properties {
     }
 
     /**
-     *
      * @return Website backend (ULR of the Admin Panel.)
      */
     public static String getBaseAdminUrl() {
@@ -27,7 +25,6 @@ public class Properties {
     }
 
     /**
-     *
      * @return The name of the browser that need to be used for execution.
      */
     public static String getBrowser() {
@@ -45,6 +42,7 @@ enum EnvironmentVariables {
     BROWSER("browser");
 
     private String value;
+
     EnvironmentVariables(String value) {
         this.value = value;
     }

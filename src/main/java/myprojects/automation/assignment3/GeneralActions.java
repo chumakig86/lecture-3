@@ -1,6 +1,8 @@
 package myprojects.automation.assignment3;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
@@ -17,16 +19,22 @@ public class GeneralActions {
 
     /**
      * Logs in to Admin Panel.
+     *
      * @param login
      * @param password
      */
     public void login(String login, String password) {
-        // TODO implement logging in to Admin Panel
-        throw new UnsupportedOperationException();
+        WebElement email = driver.findElement(By.id("email"));
+        WebElement passwd = driver.findElement(By.id("passwd"));
+        WebElement submit = driver.findElement(By.name("submitLogin"));
+        email.sendKeys(login);
+        passwd.sendKeys(password);
+        submit.click();
     }
 
     /**
      * Adds new category in Admin Panel.
+     *
      * @param categoryName
      */
     public void createCategory(String categoryName) {
