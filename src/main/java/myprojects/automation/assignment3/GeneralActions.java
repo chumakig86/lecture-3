@@ -59,7 +59,7 @@ public class GeneralActions {
         jse.executeScript("window.scrollBy(0,450)", "");
         driver.findElement(By.id("category_form_submit_btn")).click();
         waitForContentLoad();
-        System.out.println("Success  alert is displayed: " + driver.findElement(By.cssSelector(".alert.alert-success")).isDisplayed());
+        System.out.println("Success  alert is displayed? " + driver.findElement(By.cssSelector(".alert.alert-success")).isDisplayed());
 
     }
 
