@@ -47,18 +47,17 @@ public class GeneralActions {
 
         WebElement ctlgTab = driver.findElement(By.xpath("//li[@data-submenu='9']"));
         builder.moveToElement(ctlgTab).perform();
-        waitForContentLoad();
         WebElement ctg = driver.findElement(By.xpath("//li[@data-submenu='11']"));
+        wait.until(ExpectedConditions.visibilityOf(ctg));
+
         builder.moveToElement(ctg).perform();
-        waitForContentLoad();
         builder.click(ctg).perform();
-        waitForContentLoad();
-        driver.findElement(By.id("desc-category-new")).click();
-        waitForContentLoad();
+        WebElement descCategoryNew = driver.findElement(By.id("desc-category-new"));
+        wait.until(ExpectedConditions.visibilityOf(descCategoryNew));
+        descCategoryNew.click();
         driver.findElement(By.id("name_1")).sendKeys(categoryName);
         jse.executeScript("window.scrollBy(0,450)", "");
         driver.findElement(By.id("category_form_submit_btn")).click();
-        waitForContentLoad();
         System.out.println("Success  alert is displayed? " + driver.findElement(By.cssSelector(".alert.alert-success")).isDisplayed());
 
     }
