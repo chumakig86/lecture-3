@@ -41,6 +41,6 @@ public class CreateCategoryTest extends BaseScript {
         }
         System.out.println("New category is present? " + catPresent);
         // finish script
-        driver.close();
+        driver.quit();
     }
 }
